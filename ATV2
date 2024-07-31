@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class AtvArray5 {
+
+	public static void main(String[] args) {
+		List<Integer> numeros = new ArrayList<>();
+		Scanner ler = new Scanner(System.in);
+
+		int i = 1;
+		while (i != 0) {
+			System.out.println("Informe os valores (ou 0 para terminar): ");
+			i = ler.nextInt();
+			if (i != 0) {
+				numeros.add(i);
+			}
+		}
+		System.out.println("Lista de números inseridos: " + numeros);
+		System.out.println("Números pares:");
+		for (int num : numeros) {
+			if (num % 2 == 0) {
+				System.out.println(num);
+			}
+		}
+		ler.close();
+	}
+}
